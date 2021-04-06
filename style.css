@@ -1,0 +1,34 @@
+#body {
+    background-color: #a8c6fa;
+}
+
+.title {
+    color: #840705;
+    font-size: 60px;
+    text-align: center;
+    
+}
+
+.name {
+    color: #840705;
+    font-size: 45px;
+    text-align: center;
+}
+
+#timer-box {
+    border: black 1px;
+    height: 40px;
+    width: 75px;
+    background-color: whitesmoke;
+    position: absolute;
+    right: 1%; 
+    
+}
+
+#picture {
+    border: black 1px;
+    height: 400px;
+    width: 98%;
+    background-color: rebeccapurple;
+}
+
