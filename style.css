@@ -21,14 +21,52 @@
     width: 75px;
     background-color: whitesmoke;
     position: absolute;
-    right: 1%; 
+     
     
 }
 
-#picture {
+/*#picture {
+    background-image: url("http://www.wordofmitch.com/wp-content/uploads/2020/05/teenage-love.jpg");
     border: black 1px;
-    height: 400px;
-    width: 98%;
+    height: 350px;
+    width: 600px;
     background-color: rebeccapurple;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+    
+    
 }
+*/
+/*
+#picture-old{
+    background-image: url("https://i.pinimg.com/originals/18/b5/3e/18b53e92bba7b36a972c4d2c5262df1b.jpg");
+    
+    border: black 1px;
+    height: 350px;
+    width: 600px;
+    background-color: rebeccapurple;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+    
+}  
+*/
+#picture {
+    background-image: url("https://dq1eylutsoz4u.cloudfront.net/2019/01/31131829/mature-love.jpg");
+    
+    border: black 1px;
+    height: 350px;
+    width: 600px;
+    background-color: rebeccapurple;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+
 
