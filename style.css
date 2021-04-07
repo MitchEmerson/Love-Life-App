@@ -66,6 +66,7 @@
   margin-left: auto;
   margin-right: auto;
   border-radius: 7px;
+  
 
 }
 
@@ -75,18 +76,24 @@
     color: #840705;
 }
 
+.progress {
+    display: block;
+}
+
 .metrics {
     text-align: center;
     font-size: 25;
     color: #e61610;
+    display: block;
 }
 
 .container  {
-    margin: auto;
-    color: #840705;
-    width: 80%;
+    align-items: center;
+    margin-left: 30%;
+    width: 30%;
     border-radius: 15px;
-    border: 1px black;
+    display: inline-block;
+    
 }
 
 .progress-bar {
@@ -96,15 +103,34 @@
     padding: 3px;
     border-radius: 3px;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+   
 }
 
 .progress-bar-fill {
     display: block;
     height: 22px;
-    background-color: #659cef;
+    background-color: #1e5fc0;
     border-radius: 3px;
+    border: black 1px;
     transition: width 500ms ease-in-out;
 }
+
+.buttons {
+    background-color: #4CAF50; 
+    border: none;
+    border-radius: 5px;
+    color: #840705;
+    padding: 15px 32px;
+    display: block;
+    text-decoration: none;
+    display: inline;
+    font-size: 16px;
+    margin-left: 105%;
+    margin-bottom: 10%;
+    position: relative; 
+    top: -30px;
+    
+   }
 
 
 
