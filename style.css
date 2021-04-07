@@ -21,6 +21,7 @@
     width: 75px;
     background-color: whitesmoke;
     position: absolute;
+    border-radius: 7px;
      
     
 }
@@ -55,17 +56,26 @@
 }  
 */
 #picture {
-    background-image: url("https://dq1eylutsoz4u.cloudfront.net/2019/01/31131829/mature-love.jpg");
+    background-image: url("http://www.wordofmitch.com/wp-content/uploads/2020/05/teenage-love.jpg");
     
     border: black 1px;
-    height: 350px;
+    height: 340px;
     width: 600px;
     background-color: rebeccapurple;
     display: block;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 7px;
 
 }
+
+.love-age {
+    text-align: center;
+    font-size: 30px;
+    color: #840705;
+}
+
+
 
 
 
