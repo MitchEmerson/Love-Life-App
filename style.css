@@ -2,14 +2,21 @@
     background-color: #a8c6fa;
 }
 
-.title {
+/*div {
+  font-family: myFirstFont;
+*/
+/*(https://github.com/theleagueof/league-gothic/raw/master/images/league-gothic-1.png)*/
+#title {
+    font-family: Arial, Helvetica, sans-serif;
     color: #840705;
     font-size: 60px;
     text-align: center;
+    text-decoration: none;
     
 }
 
-.name {
+#name-of-love {
+    font-family: Arial, Helvetica, sans-serif;
     color: #840705;
     font-size: 45px;
     text-align: center;
@@ -92,34 +99,35 @@
     margin-left: 30%;
     width: 30%;
     border-radius: 15px;
+    border: 1px, black;
     display: inline-block;
     
 }
 
 .progress-bar {
     margin: auto;
-    height: 22px;
+    height: 27px;
     background-color: #e0e0e0;
     padding: 3px;
     border-radius: 3px;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
-   
+    border: black, 1px;
 }
 
 .progress-bar-fill {
     display: block;
-    height: 22px;
+    height: 27px;
     background-color: #1e5fc0;
     border-radius: 3px;
-    border: black 1px;
+    border: 1px, black;
     transition: width 500ms ease-in-out;
 }
 
 .buttons {
     background-color: #4CAF50; 
-    border: none;
+    border: 1px, black;
     border-radius: 5px;
-    color: #840705;
+    color: #e61610;
     padding: 15px 32px;
     display: block;
     text-decoration: none;
@@ -128,9 +136,8 @@
     margin-left: 105%;
     margin-bottom: 10%;
     position: relative; 
-    top: -30px;
-    
-   }
+    top: -35px;
+    }
 
 
 

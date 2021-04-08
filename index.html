@@ -5,13 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
+    <!--Vendor Script-->
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  <!--Script-->
+    <script src="app.js" defer></script>
     <title>Document</title>
 </head>
 <body id="body">
     <header>
-        <h1 class = "title">Love-Life</h1>
-        <h2 class = "name">Name of Love</h2>
+        <h1 id = "title">Love-Life</h1>
+        <h2 id = "name-of-love">Name of Love</h2>
     </header>
         <div id="picture">
             <div id="timer-box"></div>
@@ -21,18 +27,19 @@
         <h2 class = "metrics">Romance</h2>
             <div class="container">
                 <span class="progress-bar-fill" style="width: 70%;"></span>
-                <button class = "buttons" type="button">Romance</button>
+                <button id = "romance" class = "buttons" type="button">Romance</button>
             </div>
         <h2 class = "metrics">Space</h2>
             <div class="container">
                 <span class="progress-bar-fill" style="width: 100%;"></span>
-                <button class = "buttons" type="button">Space</button>
+                <button id = "space" class = "buttons" type="button">Space</button>
             </div>
         <h2 class = "metrics">Laughs</h2>
              <div class="container">
                 <span class="progress-bar-fill" style="width: 70%;"></span>
-                <button class = "buttons" type="button">Laughs</button>
+                <button id= "laughs" class = "buttons" type="button">Laughs</button>
             </div>
+        </section>
     
 
     
