@@ -4,56 +4,66 @@
 The game has metrics.  To keep their love alive, the user must press buttons. The buttons will add two points to the metrics of, "romance", "space", and "laughs".  The metrics will start at a 5, in a scale between 1-10.  Each of the metrics will decrease one point each second of the game.  If the user keeps all three metrics above 0 throughout the five minutes, they will receive an image of "strong love", and if they are unable to keep the metrics up...their love will die.  */
 
 const loveLife = {
-    romance: 5,
-    space: 5,
-    laughs: 5,
-    start(event) {
-        console.log('Time for Love!');
-        $("#start-button").remove();
-        $("#romance-btn").on("click", loveLife.increaseRomance);
-        $("#space-btn").on("click", loveLife.method );
-        $("#laughs-btn").on("click", loveLife.method );
-    },
-    increaseRomance() {
-        return loveLife.romance+=2;
-    },
-    spaceHealth() {
-        loveLife.space+=2;
-    },
-
-    laughsHealth() {
-        loveLife.laughs+=2;
-    }
-};
-
-
-
-
-$("#start-button").on("click", loveLife.start); 
-
-
- 
-/*const loveLife = {
     age: "young love",
     romance: 5,
     space: 5,
     laughs: 5,
- },
+    progressBarsTimer: null,
+    //progressBarsTime: 5,
+    time: 60,  
+    timer: null,
+    start(event) {
+        console.log('Time for Love!');
+        $("#start-button").remove();
+        $("#romance-btn").on("click", loveLife.romance.romanceHealth);
+        $("#space-btn").on("click", loveLife.space.spaceHealth);
+        $("#laughs-btn").on("click", loveLife.laughs.laughsHealth);
+    },
+    startTimer(){
+        loveLife.timer = setInterval(loveLife.reduceTime, 1000);
+        loveLife.progressBarsTimer = setInterval(loveLife.progressBarsReduceTime, 5000); 
+    },
+    romanceHealth() {
+        return loveLife.romance++;
+    },
+    spaceHealth() {
+        return loveLife.space++;
+    },
+    laughsHealth() {
+        return loveLife.laughs++;
+    },
+    reduceTime(){
+        loveLife.time--;
+        if(loveLife.time <= 0){
+            loveLife.age++;
+            loveLife.time = 180;
+            $("p").text(`Age of Love: ${loveLife.age}`);
+        }
+    },
+
+};
+
+$("#start-button").on("click", loveLife.start); 
+
+
+
+
+//Objects to create
+
+ //const timer = {
+
+ //},
+
+ //const img ={
+
+ //},
+
+
+ //Methods = timer counting down, metrics decreasing with seconds 1:1, age progression (1-2-3mins), //image change (1-2,3mins), game end(win/loss)
+
 
    
-
-    romanceHealth() {
-        loveLife.romance++;
-    },
-
-    spaceHealth() {
-        loveLife.space++;
-    },
-
-    laughsHealth() {
-        loveLife.laughs++;
-    }
-      */  
+ 
 
 
 
