@@ -4,9 +4,26 @@
 The game has metrics.  To keep their love alive, the user must press buttons. The buttons will add two points to the metrics of, "romance", "space", and "laughs".  The metrics will start at a 5, in a scale between 1-10.  Each of the metrics will decrease one point each second of the game.  If the user keeps all three metrics above 0 throughout the five minutes, they will receive an image of "strong love", and if they are unable to keep the metrics up...their love will die.  */
 
 const loveLife = {
+    romance: 5,
+    space: 5,
+    laughs: 5,
     start(event) {
         console.log('Time for Love!');
+        $("#start-button").remove();
+        $("#romance-btn").on("click", loveLife.increaseRomance);
+        $("#space-btn").on("click", loveLife.method );
+        $("#laughs-btn").on("click", loveLife.method );
     },
+    increaseRomance() {
+        return loveLife.romance+=2;
+    },
+    spaceHealth() {
+        loveLife.space+=2;
+    },
+
+    laughsHealth() {
+        loveLife.laughs+=2;
+    }
 };
 
 
