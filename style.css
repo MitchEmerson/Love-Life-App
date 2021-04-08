@@ -15,11 +15,30 @@
     
 }
 
-#name-of-love {
+#nameOfLoveInput {
+    color: #840705;
+    text-align: center;
+    font-size: 15px;
+    margin-left: 43%;
+    margin-bottom: 10px;
+    margin-top: -20px;
+  
+}
+
+#nameOfLove {
     font-family: Arial, Helvetica, sans-serif;
     color: #840705;
     font-size: 45px;
     text-align: center;
+}
+
+#start-button {
+    background-color: #4CAF50; 
+    border: 1px, black;
+    border-radius: 5px;
+    color: #e61610;
+    margin-left: 48%;
+    
 }
 
 #timer-box {
@@ -33,35 +52,6 @@
     
 }
 
-/*#picture {
-    background-image: url("http://www.wordofmitch.com/wp-content/uploads/2020/05/teenage-love.jpg");
-    border: black 1px;
-    height: 350px;
-    width: 600px;
-    background-color: rebeccapurple;
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
-  
-    
-    
-}
-*/
-/*
-#picture-old{
-    background-image: url("https://i.pinimg.com/originals/18/b5/3e/18b53e92bba7b36a972c4d2c5262df1b.jpg");
-    
-    border: black 1px;
-    height: 350px;
-    width: 600px;
-    background-color: rebeccapurple;
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
-  
-    
-}  
-*/
 #picture {
     background-image: url("http://www.wordofmitch.com/wp-content/uploads/2020/05/teenage-love.jpg");
     
