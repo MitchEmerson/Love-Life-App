@@ -10,62 +10,119 @@ The game has metrics.  To keep their love alive, the user must press buttons. Th
     space: 5,
     laughs: 5,
     progressBarsTimer: null,
+    time: 3,
     //progressBarsTime: 5,  
     
     clickStart() {
-        
-        
         $("#start-button").remove();
         $("#romance-btn").on("click", loveLife.romanceHealth);
         $("#space-btn").on("click", loveLife.spaceHealth);
         $("#laughs-btn").on("click", loveLife.laughsHealth);
         $("#countdown").on("click", loveLife.countdownEl);
+        loveLife.increaseAge();
     
-    }
-},
+    },
+
+
     
-              
-        startingTimer = 3;
-        let time = startingTimer * 60;
-
-        const countdownEl = document.getElementById('countdown');
-        
-        setInterval(updateCountdown, 1000);
-        
-
-        function updateCountdown()  {
-            const minutes = Math.floor(time/60);
-            let seconds = time % 60;
-
-            seconds = seconds < 10 ? '0' + seconds : seconds;
-
-            countdownEl.innerHTML = `${minutes}: ${seconds}`;
-            time--;
-
-        };
-    
-        
-    
-        /* changeImg = function () {
-             if (loveLife.countdownEl > 120 < 180) {loveLife.picture
-             }else{
-                 if (loveLife.countdownEl > 60 < 120) {loveLife.picture}else{
-                     if (loveLife.countdownEl > 0 < 60) {loveLife.picture}else{  if (loveLife.countdownEl < 0)  {loveLife.picture};
-                 }
-             }
-            
              
-    /*romanceHealth() {
-        console.log("this workin?")
-        loveLife.romance++;
         
-    },
-    spaceHealth() {
+        //let time : startingTimer * 60,
+
+        
+        
+        
+        
+        updateCountdown()  {
+            const minutes = Math.floor(loveLife.time);
+            let seconds = minutes * 60;
+            //console.log(seconds, "first log")
+            seconds = seconds < 10 ? 0 + seconds : seconds;
+            //console.log(typeof seconds, "second log")
+            
+            const $countdownEl = $("#countdown");
+            $countdownEl.text = `${minutes}: ${seconds}`;
+            if (loveLife.time > 0) {
+                loveLife.time--;
+                
+            }
+
+            
+
+        },
+        
+        //We need to declare a new variable
+
+       increaseAge() {
+           if(loveLife.time > 2) {
+               console.log(loveLife.age)
+           }
+           
+       },
+       
+       romanceHealth() { 
+           console.log(loveLife.romance);
+           
+        },
+        
+        spaceHealth()  {
+            
+        },
+        
+        
+        laughsHealth() {
+            
+            
+        },
+        
+    };
+    
+    setInterval(loveLife.updateCountdown, 1000),
+    
+    
+    $("#start-button").on("click", loveLife.clickStart);
+    
+    //$("#romance-btn").on("click", loveLife.romanceHealth);
+    
+    $("#space-btn").on("click", loveLife.clickStart);
+    
+    $("#laughs-btn").on("click", loveLife.clickStart);
+    
+    $("countdownEl").on("click", loveLife.clickStart);
+    
+    
+    
+    
+    
+    
+    /*  changeImg = function () {
+        if (loveLife.countdownEl > 120 && < 180) {loveLife.picture
+        }else{
+            if (loveLife.countdownEl > 60 && < 120) {loveLife.picture}else{
+                if (loveLife.countdownEl > 0 && < 60) {loveLife.picture}else{  if (loveLife.countdownEl < 0)  {loveLife.picture};
+            }
+        }
+            */
+       
+    /*romanceHealth() { 
+         if ($('romance-btn').clicked == true)
+         console.log("am I stupid")
+         return loveLife.romance++;
+    }
+         
+    spaceHealth()  {
+        if($('space-btn').clicked == true)
         return loveLife.space++;
-    },
+    }
+        
+    
     laughsHealth() {
+        if($('laughs-btn').clicked == true)
         return loveLife.laughs++;
-    },
+    };
+    
+    
+    
     /*reduceTime(){
         loveLife.time--;
         if(loveLife.time <= 0){
@@ -94,9 +151,6 @@ $("#start-button").on("click", loveLife.start); */
  //Methods = timer counting down, metrics decreasing with seconds 1:1, age progression (1-2-3mins), //image change (1-2,3mins), game end(win/loss)
 
 
- $("#start-button").on("click", loveLife.clickStart);  
-
- $("countdownEl").on("click", loveLife.clickStart)
 
 
 
@@ -118,3 +172,17 @@ $("#start-button").on("click", loveLife.start); */
 
 
 
+/* increaseAge()  {
+            if(loveLife.countdownEl > 120 && loveLife.countdownEl < 180){
+                console.log("young love")
+            }else{
+                if(loveLife.countdownEl < 120 && loveLife.countdownEl> 60 ){
+                    return "grown-up love"
+                }else{
+                    if(loveLife.countdownEl < 60 && loveLife.countdownEl > 0){
+                        return "old-love"
+                    }
+                }
+            }
+        }
+        */
