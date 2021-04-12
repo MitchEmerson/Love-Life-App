@@ -44,12 +44,16 @@
 #timer-box {
     border: black 1px;
     height: 40px;
-    width: 75px;
+    width: 70px;
     background-color: whitesmoke;
     position: absolute;
     border-radius: 7px;
      
     
+}
+#countdown {
+    margin-left: 10px;
+    margin-top: 3px;
 }
 
 #picture {
