@@ -20,17 +20,18 @@ The game has metrics.  To keep their love alive, the user must press buttons. Th
         $("#space-btn").on("click", loveLife.spaceHealth);
         $("#laughs-btn").on("click", loveLife.laughsHealth);
         $("#countdown").on("click", loveLife.countdownEl);
-    },
-        
-}  
-        
-        
-        const startingTimer = 3;
+    
+    }
+},
+    
+              
+        startingTimer = 3;
         let time = startingTimer * 60;
 
         const countdownEl = document.getElementById('countdown');
         
         setInterval(updateCountdown, 1000);
+        
 
         function updateCountdown()  {
             const minutes = Math.floor(time/60);
@@ -40,9 +41,20 @@ The game has metrics.  To keep their love alive, the user must press buttons. Th
 
             countdownEl.innerHTML = `${minutes}: ${seconds}`;
             time--;
-        }
+
+        };
     
-         
+        
+    
+        /* changeImg = function () {
+             if (loveLife.countdownEl > 120 < 180) {loveLife.picture
+             }else{
+                 if (loveLife.countdownEl > 60 < 120) {loveLife.picture}else{
+                     if (loveLife.countdownEl > 0 < 60) {loveLife.picture}else{  if (loveLife.countdownEl < 0)  {loveLife.picture};
+                 }
+             }
+            
+             
     /*romanceHealth() {
         console.log("this workin?")
         loveLife.romance++;
@@ -82,7 +94,9 @@ $("#start-button").on("click", loveLife.start); */
  //Methods = timer counting down, metrics decreasing with seconds 1:1, age progression (1-2-3mins), //image change (1-2,3mins), game end(win/loss)
 
 
-   
+ $("#start-button").on("click", loveLife.clickStart);  
+
+ $("countdownEl").on("click", loveLife.clickStart)
 
 
 
