@@ -23,13 +23,13 @@ const loveLife = {
       let timerID = setInterval(function() {
         loveLife.romance > 0 && loveLife.romance--;
         $("#romance-progress-span").width(`${loveLife.romance}0%`);
-        console.log(`Romance Counter: ${loveLife.romance}`);
+        //console.log(`Romance Counter: ${loveLife.romance}`);
         loveLife.laughs > 0 && loveLife.laughs--;
         $("#space-progress-span").width(`${loveLife.space}0%`);
-        console.log(`Laugh Counter: ${loveLife.laughs}`);
+        //console.log(`Laugh Counter: ${loveLife.laughs}`);
         loveLife.space > 0 && loveLife.space--;
         $("#laughs-progress-span").width(`${loveLife.laughs}0%`);
-        console.log(`Space Counter: ${loveLife.space}`);
+        //console.log(`Space Counter: ${loveLife.space}`);
         if(loveLife.romance == 0 && loveLife.laughs == 0 && loveLife.space == 0) {
           loveLife.lost = true;
           $("#li1").hide();
@@ -58,7 +58,7 @@ const loveLife = {
         if(!loveLife.lost) {
           $("#li3").hide();
           $("#li4").show();
-          $("#loveAgeDisplay").text("Strong Love");
+          $("#loveAgeDisplay").text("GAME OVER: You have a strong love");
           clearInterval(timerID);
         }
       }, 60000);
@@ -88,10 +88,10 @@ const loveLife = {
   },
          //need to declare a variable 
          increaseAge() {
-         if(loveLife.time > 2){ 
-             console.log(loveLife.age)
-             return $(loveLife.age)
-         }
+            if(loveLife.time > 2){ 
+                console.log(loveLife.age)
+                return $(loveLife.age)
+            }
          },
          
      //},
@@ -100,13 +100,13 @@ const loveLife = {
         loveLife.romance < 10 && loveLife.romance++;
         //console.log(loveLife.romance);
         $("#romance-progress-span").width(`${loveLife.romance}0%`);
-      },
-      spaceHealth() {
+        },
+        spaceHealth() {
         loveLife.space < 10 && loveLife.space++;
         //console.log(loveLife.space);
         $("#space-progress-span").width(`${loveLife.space}0%`);
-      },
-      laughsHealth() {
+        },
+        laughsHealth() {
         loveLife.laughs < 10 && loveLife.laughs++;
         //console.log(loveLife.laughs);
         $("#laughs-progress-span").width(`${loveLife.laughs}0%`);
