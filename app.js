@@ -37,7 +37,7 @@ const loveLife = {
           $("#li3").hide();
           $("#li4").hide();
           $("#li5").show();
-          $("#loveAgeDisplay").text("Dead Love");
+          $("#loveAgeDisplay").text("GAME OVER: DEAD LOVE");
           setTimeout(function() {
             clearInterval(timerID);
           },60000);
