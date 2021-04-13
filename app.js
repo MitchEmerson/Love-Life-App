@@ -112,6 +112,18 @@ const loveLife = {
         $("#laughs-progress-span").width(`${loveLife.laughs}0%`);
       }
     };
+    $("#li2").hide();
+    $("#li3").hide();
+    $("#li4").hide();
+    $("#li5").hide();
+    $("#start-button").on("click", loveLife.clickStart);
+    //$("#countdownEl").on("click", loveLife.clickStart);
+    // this will log "this is inside the hello method"
+    // this will log "this is inside the hello method" 
+    //setInterval(loveLife.updateCountdown(), 1000)
+  
+    
+  
   
   
   
