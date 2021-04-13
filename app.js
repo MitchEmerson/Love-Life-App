@@ -68,7 +68,7 @@ const loveLife = {
   },
   
 
-  updateCountdown() {
+      updateCountdown() {
       console.log("inside update");
       const minutes = Math.floor(loveLife.time/60);
       let seconds = loveLife.time % 60;
@@ -96,7 +96,7 @@ const loveLife = {
          
      //},
      /// Event Listeners/button clicks
-      romanceHealth() {
+        romanceHealth() {
         loveLife.romance < 10 && loveLife.romance++;
         //console.log(loveLife.romance);
         $("#romance-progress-span").width(`${loveLife.romance}0%`);
