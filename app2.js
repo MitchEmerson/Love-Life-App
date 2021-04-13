@@ -1,4 +1,4 @@
-
+app2.js
 const loveLife = {
   name: null,
   age: "young love",
@@ -40,7 +40,7 @@ const loveLife = {
           $("#loveAgeDisplay").text("Dead Love");
           setTimeout(function() {
             clearInterval(timerID);
-          },60000);
+          },4000);
         }
       }, 1000);
 
@@ -48,12 +48,12 @@ const loveLife = {
         $("#li1").hide();
         $("#li2").show();
         $("#loveAgeDisplay").text("Grown Up Love");
-      }, 60000);
+      }, 2000);
       setTimeout(function() {
         $("#li2").hide();
         $("#li3").show();
         $("#loveAgeDisplay").text("Old Love");
-      }, 60000);
+      }, 4000);
       setTimeout(function() {
         if(!loveLife.lost) {
           $("#li3").hide();
@@ -61,9 +61,9 @@ const loveLife = {
           $("#loveAgeDisplay").text("Strong Love");
           clearInterval(timerID);
         }
-      }, 60000);
+      }, 6000);
       
-    
+    // put 60000 instead of the 2000 just in case
     
   },
   
@@ -81,12 +81,12 @@ const loveLife = {
       seconds = seconds < 10 ? 0 + seconds : seconds;
       $countdownEl.text = `${minutes}: ${seconds}`;
       if (loveLife.time >= 0){
-          //console.log(loveLife.time, "hi, bud");
+          console.log(loveLife.time, "hi, bud");
           $("#countdownEl").text(`${minutes}: ${seconds}`);
            loveLife.time--;
        }
   },
-         //need to declare a variable 
+         //we need to declare a variable 
          increaseAge() {
          if(loveLife.time > 2){ 
              console.log(loveLife.age)
@@ -95,23 +95,32 @@ const loveLife = {
          },
          
      //},
-     /// Event Listeners/button clicks
+     /// functions that denote the button clicks
       romanceHealth() {
         loveLife.romance < 10 && loveLife.romance++;
-        //console.log(loveLife.romance);
+        console.log(loveLife.romance);
         $("#romance-progress-span").width(`${loveLife.romance}0%`);
       },
       spaceHealth() {
         loveLife.space < 10 && loveLife.space++;
-        //console.log(loveLife.space);
+        console.log(loveLife.space);
         $("#space-progress-span").width(`${loveLife.space}0%`);
       },
       laughsHealth() {
         loveLife.laughs < 10 && loveLife.laughs++;
-        //console.log(loveLife.laughs);
+        console.log(loveLife.laughs);
         $("#laughs-progress-span").width(`${loveLife.laughs}0%`);
       }
     };
+  $("#li2").hide();
+  $("#li3").hide();
+  $("#li4").hide();
+  $("#li5").hide();
+  $("#start-button").on("click", loveLife.clickStart);
+  //$("#countdownEl").on("click", loveLife.clickStart);
+  // this will log "this is inside the hello method"
+  // this will log "this is inside the hello method" 
+  //setInterval(loveLife.updateCountdown(), 1000)
   
   
   
